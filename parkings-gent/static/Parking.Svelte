@@ -7,7 +7,7 @@
   </head>
   <body style="text-align: center">
     <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/builds.loader.js"></script>
+    <script src="Build/static.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -18,9 +18,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/builds.data.unityweb",
-        frameworkUrl: "Build/builds.framework.js.unityweb",
-        codeUrl: "Build/builds.wasm.unityweb",
+        dataUrl: "Build/static.data",
+        frameworkUrl: "Build/static.framework.js",
+        codeUrl: "Build/static.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "WebTopicsAdvancedGame",
