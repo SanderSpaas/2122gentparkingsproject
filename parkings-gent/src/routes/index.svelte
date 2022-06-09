@@ -1,5 +1,6 @@
 <script>
-	 import Parking from "/src/components/Parking.svelte";//import the parking component 
+	//  import Parking from "/src/components/Parking.svelte";//import the parking component 
+     import Parking from "/static/Parking.svelte";//import the parking component 
 
 </script>
 
