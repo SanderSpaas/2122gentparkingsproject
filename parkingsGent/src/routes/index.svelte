@@ -28,7 +28,7 @@
 <!-- //HTML -->
 <style>
 	p {
-		width: 70vw;
+		width: 60em;
 	}
 	main {
 		display: flex;

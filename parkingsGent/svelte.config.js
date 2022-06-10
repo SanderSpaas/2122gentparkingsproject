@@ -1,17 +1,13 @@
 // import adapter from '@sveltejs/adapter-auto';
 // import node from '@sveltejs/adapter-node';
-import adapter from '@sveltejs/adapter-static';
-
+// import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
-			fallback: null,
-			precompress: false
-		}),
+		kit: {
+			adapter: adapter()
+		},
 		vite: {
 			server: {
 				fs: {
