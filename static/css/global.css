@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-*{
-   font-family: 'Fira Sans', sans-serif;
+* {
+	font-family: 'Fira Sans', sans-serif;
+	color: #23333a;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto Mono', monospace;
 }

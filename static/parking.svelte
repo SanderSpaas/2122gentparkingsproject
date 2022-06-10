@@ -3,7 +3,7 @@
 
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=70vw height=50vh></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -56,8 +56,8 @@
         frameworkUrl: buildUrl + "/BuildsUnity.framework.js",
         codeUrl: buildUrl + "/BuildsUnity.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "WebTopicsAdvancedGame",
+        companyName: "Odisee Web Topics Advanced",
+        productName: "Parkings @ Gent",
         productVersion: "1.0.2",
         showBanner: unityShowBanner,
       };
@@ -80,7 +80,7 @@
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+        config.devicePixelRatio = 1;
 
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
@@ -89,11 +89,11 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "800px";
-        canvas.style.height = "500px";
+        canvas.style.width = "70vw";
+        canvas.style.height = "50vh";
       }
 
-      loadingBar.style.display = "block";
+      // loadingBar.style.display = "block";
 
       var script = document.createElement("script");
       script.src = loaderUrl;

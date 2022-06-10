@@ -9,7 +9,7 @@
 	</nav>
 </header>
 <slot />
-<footer />
+<footer>Made by Sander Spaas with: Svelte, Unity and Jamstack.</footer>
 
 
 <!-- /src/routes/__layout.svelte -->
@@ -36,10 +36,13 @@
 		border-radius: 5px;
 		padding: 0.5em;
 		color: white;
-		font-family: 'Roboto Mono', monospace;
 	}
 	footer {
 		background-color: rgb(79, 155, 220);
-		height: 10vh;
+		height: 7vh;
+		display: flex;
+		color: white;
+		align-items: center;
+		justify-content: center;
 	}
 </style>

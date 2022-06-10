@@ -50,12 +50,13 @@
 		<p>Last updated on: {data.records[0].fields.lastupdate}</p>
 		<p>{data.records[0].fields.description}</p>
 		<p>
-			Er zijn momenteel nog {data.records[0].fields.availablecapacity} van de {data.records[0].fields
-				.totalcapacity} plaatsen vrij. Dat is dus een bezetting van ongeveer {Math.round(
-				((data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity) /
+			Er zijn momenteel {data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity} van de {data.records[0].fields
+				.totalcapacity} plaatsen bezet. Dat is dus een bezetting van ongeveer {Math.round((((data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity) /
 					data.records[0].fields.totalcapacity) *
-					100
-			)}%, straf he?
+					100)*100)/100}%, straf he?
+		</p>
+		<p>
+			Er zijn dus nog {data.records[0].fields.availablecapacity} plaatskes over.
 		</p>
 		<p>
 			Ben je geïnteresseerd in de officiële pagina? Klik dan <a
@@ -64,8 +65,6 @@
 		</p>
 		<p>Wilde zagen? Dat kan bij: {data.records[0].fields.operatorinformation}.</p>
 	</div>
-{:else}
-	<p>Go on click on something...</p>
 {/if}
 
 <style type="text/scss">
@@ -73,8 +72,9 @@
 		background-color: rgb(240, 249, 253);
 		padding: 1em;
 		border-radius: 5px;
-		color: #23333a;
 		margin: 1em;
+		width: 70vw;
+		box-sizing: border-box;
 	}
 	.titel {
 		display: flex;
@@ -97,6 +97,8 @@
 		flex-wrap: wrap;
 		width: 70vw;
 		justify-content: center;
+		padding: 1em;
+		box-sizing: border-box;
 	}
 	button {
 		background-color: rgb(79, 155, 220);

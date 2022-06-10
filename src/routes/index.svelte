@@ -8,7 +8,7 @@
 </script>
 
 <main>
-	<div><img src="img/Car.png" alt="Car" /></div>
+	<div><img src="img/Car.png" alt="Car" /><h2>Parking @ Gent</h2></div>
 	<p>
 		This project was created by me @SanderSpaas for the course "Web Topics Advanced". In this course
 		you pick a variety of technologies you haven't worked with before and make a cool project with
@@ -28,7 +28,7 @@
 <!-- //HTML -->
 <style>
 	p {
-		width: 60em;
+		width: 70vw;
 	}
 	main {
 		display: flex;
@@ -42,6 +42,7 @@
 	}
 	div {
 		width: 33vw;
-		margin: 3em;
+		margin: 1em;
+		text-align: center;
 	}
 </style>
