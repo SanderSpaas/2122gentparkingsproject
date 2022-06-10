@@ -21,9 +21,9 @@
 			.then((response) => {
 				data = response;
 				console.log(response);
+				GlobalUnityInstance.SendMessage('Main Camera', 'getDataFromPage', JSON.stringify(response));
 				loading = false;
 			});
-		 GlobalUnityInstance.SendMessage( "Main Camera", "getDataFromPage", JSON.stringify(data));
 	}
 </script>
 
@@ -37,32 +37,45 @@
 	</div>
 {/if}
 
-{#if data}
-<div class="parkingInfo"><div class="titel">
-		<h2>{data.records[0].fields.name}</h2>
-		
-		{#if data.records[0].fields.isopennow}
-			<span>Open</span>
-		{:else}
-			<span class:closed>Closed</span>
-		{/if}
+{#if data && loading === false}
+	<div class="parkingInfo">
+		<div class="titel">
+			<h2>{data.records[0].fields.name}</h2>
+			{#if data.records[0].fields.isopennow}
+				<span>Open</span>
+			{:else}
+				<span class:closed>Closed</span>
+			{/if}
+		</div>
+		<p>Last updated on: {data.records[0].fields.lastupdate}</p>
+		<p>{data.records[0].fields.description}</p>
+		<p>
+			Er zijn momenteel nog {data.records[0].fields.availablecapacity} van de {data.records[0].fields
+				.totalcapacity} plaatsen vrij. Dat is dus een bezetting van ongeveer {Math.round(
+				((data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity) /
+					data.records[0].fields.totalcapacity) *
+					100
+			)}%, straf he?
+		</p>
+		<p>
+			Ben je geïnteresseerd in de officiële pagina? Klik dan <a
+				href={data.records[0].fields.urllinkaddress}>hier</a
+			>.
+		</p>
+		<p>Wilde zagen? Dat kan bij: {data.records[0].fields.operatorinformation}.</p>
 	</div>
-<p>Last updated on: {data.records[0].fields.lastupdate}</p>
-	<p>{data.records[0].fields.description}</p>
-	<p>Er zijn momenteel {data.records[0].fields.occupation} van de {data.records[0].fields.availablecapacity} plaatsen bezet. Dat is dus een bezetting van ongeveer {Math.round(data.records[0].fields.occupation /data.records[0].fields.availablecapacity  *100) }%, straf he?</p>
-	<p>Ben je geïnteresseerd in de officiële pagina? Klik dan <a href={data.records[0].fields.urllinkaddress}>hier</a>.</p>
-	<p>Wilde zagen? Dat kan bij: {data.records[0].fields.operatorinformation}.</p></div>
-	
+{:else}
+	<p>Go on click on something...</p>
 {/if}
 
 <style type="text/scss">
-.parkingInfo{
-	background-color:rgb(240, 249, 253);
-	padding: 1em;
-	border-radius: 5px;
-	color: #23333a;
-	margin-top: 1em;
-}
+	.parkingInfo {
+		background-color: rgb(240, 249, 253);
+		padding: 1em;
+		border-radius: 5px;
+		color: #23333a;
+		margin-top: 1em;
+	}
 	.titel {
 		display: flex;
 		justify-content: flex-start;
@@ -82,7 +95,7 @@
 	.list {
 		display: flex;
 		flex-wrap: wrap;
-		width: 50vw;
+		width: 70vw;
 		justify-content: center;
 	}
 	button {

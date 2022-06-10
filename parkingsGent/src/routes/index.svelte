@@ -16,7 +16,7 @@
 	<CarParkButtons />
 	<p>
 		Ever wanted to see the capacity of the car parks in Gent visualized in Unity? <br /> Wel now you
-		can! Just click the buttons down below to switch between de available ones. The data is updated every
+		can! Just click the buttons above to switch between de available ones. The data is updated every
 		minute.
 	</p>
 	<Parking />
