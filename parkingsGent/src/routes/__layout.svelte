@@ -9,6 +9,8 @@
 	</nav>
 </header>
 <slot />
+<footer />
+
 
 <!-- /src/routes/__layout.svelte -->
 <style>
@@ -35,5 +37,9 @@
 		padding: 0.5em;
 		color: white;
 		font-family: 'Roboto Mono', monospace;
+	}
+	footer {
+		background-color: rgb(79, 155, 220);
+		height: 10vh;
 	}
 </style>
