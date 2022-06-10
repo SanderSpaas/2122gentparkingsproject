@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	let names;
 	let data;
 	let loading = true;
@@ -11,7 +12,6 @@
 			console.log(response);
 			loading = false;
 		});
-
 	function getData(name) {
 		fetch(
 			'https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&facet=name&facet=description&refine.name=' +
@@ -27,16 +27,6 @@
 	}
 </script>
 
-{#if loading === true}
-	Loading Parking Names...
-{:else}
-	<div class="list">
-		{#each names.records as record}
-			<button on:click={getData(record.fields.name)}>{record.fields.name}</button>
-		{/each}
-	</div>
-{/if}
-
 {#if data && loading === false}
 	<div class="parkingInfo">
 		<div class="titel">
@@ -50,10 +40,14 @@
 		<p>Last updated on: {data.records[0].fields.lastupdate}</p>
 		<p>{data.records[0].fields.description}</p>
 		<p>
-			Er zijn momenteel {data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity} van de {data.records[0].fields
-				.totalcapacity} plaatsen bezet. Dat is dus een bezetting van ongeveer {Math.round((((data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity) /
+			Er zijn momenteel {data.records[0].fields.totalcapacity -
+				data.records[0].fields.availablecapacity} van de {data.records[0].fields.totalcapacity} plaatsen
+			bezet. Dat is dus een bezetting van ongeveer {Math.round(
+				((data.records[0].fields.totalcapacity - data.records[0].fields.availablecapacity) /
 					data.records[0].fields.totalcapacity) *
-					100)*100)/100}%, straf he?
+					100 *
+					100
+			) / 100}%, straf he?
 		</p>
 		<p>
 			Er zijn dus nog {data.records[0].fields.availablecapacity} plaatskes over.
@@ -64,6 +58,15 @@
 			>.
 		</p>
 		<p>Wilde zagen? Dat kan bij: {data.records[0].fields.operatorinformation}.</p>
+	</div>
+{/if}
+{#if loading === true}
+	Loading Parking Names...
+{:else}
+	<div class="list">
+		{#each names.records as record}
+			<button on:click={getData(record.fields.name)}>{record.fields.name}</button>
+		{/each}
 	</div>
 {/if}
 

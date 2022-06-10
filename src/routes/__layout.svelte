@@ -5,7 +5,7 @@
 <header>
 	<h1>Parking @ Gent</h1>
 	<nav>
-		<a href="/">Home</a>
+		<a href="/">How it was made</a>
 	</nav>
 </header>
 <slot />
@@ -44,5 +44,6 @@
 		color: white;
 		align-items: center;
 		justify-content: center;
+		margin-top: 5em;
 	}
 </style>
