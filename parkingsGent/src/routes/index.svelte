@@ -10,22 +10,25 @@
 <main>
 	<div><img src="img/Car.png" alt="Car" /></div>
 	<p>
-		Interested in some stats about these parky boyes? Just click the buttons below to let thems
+		This project was created by me @SanderSpaas for the course "Web Topics Advanced". In this course
+		you pick a variety of technologies you haven't worked with before and make a cool project with
+		it. Interested in some stats about these parky boyes? Just click the buttons below to let thems
 		spill all their secrets.
 	</p>
 	<CarParkButtons />
+
+	<Parking />
 	<p>
 		Ever wanted to see the capacity of the car parks in Gent visualized in Unity? <br /> Wel now you
 		can! Just click the buttons above to switch between de available ones. The data is updated every
 		minute.
 	</p>
-	<Parking />
 </main>
 
 <!-- //HTML -->
 <style>
 	p {
-		width: 50vw;
+		width: 70vw;
 	}
 	main {
 		display: flex;

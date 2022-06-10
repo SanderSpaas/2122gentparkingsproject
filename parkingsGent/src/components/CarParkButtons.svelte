@@ -44,7 +44,7 @@
 			{#if data.records[0].fields.isopennow}
 				<span>Open</span>
 			{:else}
-				<span class:closed>Closed</span>
+				<span class="closed">Closed</span>
 			{/if}
 		</div>
 		<p>Last updated on: {data.records[0].fields.lastupdate}</p>
@@ -74,7 +74,7 @@
 		padding: 1em;
 		border-radius: 5px;
 		color: #23333a;
-		margin-top: 1em;
+		margin: 1em;
 	}
 	.titel {
 		display: flex;
@@ -103,7 +103,7 @@
 		border-radius: 5px;
 		color: white;
 		width: fit-content;
-		padding: 0.75em;
+		padding: 1em;
 		font-weight: bold;
 		font-family: 'Roboto Mono', monospace;
 		white-space: nowrap;
