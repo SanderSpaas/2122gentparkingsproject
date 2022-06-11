@@ -59,6 +59,8 @@
 		</p>
 		<p>Wilde zagen? Dat kan bij: {data.records[0].fields.operatorinformation}.</p>
 	</div>
+{:else}
+	<p>Corrently displaying showmode Vroeemmmm... 🚗🚓🚙</p>
 {/if}
 {#if loading === true}
 	Loading Parking Names...
