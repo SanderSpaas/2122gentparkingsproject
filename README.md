@@ -7,7 +7,7 @@
 </p>
 
 > Ever wanted to see the capacity of the car parks in Ghent visualised in unity? Wel now you can!
-
+![afbeelding.png](./afbeelding.png)
 ### 🏠 [Homepage](https://parkerengent.netlify.app/)
 
 
