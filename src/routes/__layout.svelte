@@ -9,7 +9,7 @@
 	</nav>
 </header>
 <slot />
-<footer>Made by Sander Spaas with: Svelte, Unity and Jamstack.</footer>
+<footer>Made by Sander Spaas with: Svelte, Unity and Jamstack in mind.</footer>
 
 
 <!-- /src/routes/__layout.svelte -->
