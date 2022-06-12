@@ -20,7 +20,7 @@
 	</p>
 
 	<CarParkButtons />
-	<iframe src="/index.html" scrolling="no" title="parking visualiser" />
+	<iframe src="/parking.html" scrolling="no" title="parking visualiser" />
 	<!-- <Parking /> -->
 	<p>
 		Ever wanted to see the capacity of the car parks in Ghent visualized in Unity? Wel now you
