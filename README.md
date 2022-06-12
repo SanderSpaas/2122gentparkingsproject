@@ -28,7 +28,8 @@ npm run build
 👤 **Sander Spaas**
 
 * Github: [@SanderSpaas](https://github.com/SanderSpaas)
-
+* Gitlab: [@SanderSpaas](https://gitlab.com/sander.spaas)
+* Email: sander.spaas@student.odisee.be
 ## Show your support
 
 Give a ⭐️ if this project helped you!

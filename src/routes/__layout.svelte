@@ -1,16 +1,16 @@
 <script>
+	import { page } from '$app/stores';
 	var GlobalUnityInstance = null;
 </script>
 
 <header>
-	<h1>Parking @ Gent</h1>
+	<a href="/"><h1>Parking @ Gent</h1></a>
 	<nav>
-		<a href="/">How it was made</a>
+		<a href="/about" class:active={$page.url.pathname == '/howItWasMade'}>How it was made</a>
 	</nav>
 </header>
-<slot />
+<main><slot /></main>
 <footer>Made by Sander Spaas with: Svelte, Unity and Jamstack in mind.</footer>
-
 
 <!-- /src/routes/__layout.svelte -->
 <style>
@@ -29,7 +29,17 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-
+	a {
+		text-decoration: none;
+		color: #23333a;
+	}
+	.active {
+		/* font-size: 25px; */
+		background-color: rgb(79, 155, 220);
+		border-radius: 5px;
+		padding: 0.5em;
+		color: white;
+	}
 	h1 {
 		font-size: 25px;
 		background-color: rgb(79, 155, 220);

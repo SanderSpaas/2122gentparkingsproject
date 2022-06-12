@@ -3,6 +3,15 @@
 	font-family: 'Fira Sans', sans-serif;
 	color: #23333a;
 }
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+a {
+	color: rgb(0, 102, 216);
+}
 h1,
 h2,
 h3,
@@ -10,4 +19,8 @@ h4,
 h5,
 h6 {
 	font-family: 'Roboto Mono', monospace;
+}
+iframe {
+	width: 70vw;
+	height: 30em;
 }
