@@ -5,7 +5,6 @@
 	let { name } = $page.params;
 	let data;
 	onMount(async () => {
-		console.log(name);
 		fetch(
 			'https://data.stad.gent/api/records/1.0/search/?dataset=bezetting-parkeergarages-real-time&q=&facet=name&facet=description&refine.name=' +
 				name
