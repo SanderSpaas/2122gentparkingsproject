@@ -24,4 +24,4 @@
 </svelte:head>
 
 <ParkingData {data} />
-<iframe src="/index.html" scrolling="no" title="parking visualiser" />
+<iframe src="/parking.html" scrolling="no" title="parking visualiser" />
